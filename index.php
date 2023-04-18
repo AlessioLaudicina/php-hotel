@@ -53,8 +53,11 @@
 
     ];
 
-  foreach($hotels as $key => $value){
-   var_dump($value) ;
+  foreach($hotels as $key => $hotel){
+    foreach($hotel as $classhotel){
+        echo $classhotel .'<br>';
+    }
+   
   }
 
 ?>
