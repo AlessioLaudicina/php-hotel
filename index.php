@@ -54,7 +54,7 @@
     ];
 
   foreach($hotels as $key => $value){
-    echo $value;
+   var_dump($value) ;
   }
 
 ?>
