@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>php hotel</title>
-</head>
-
-<body>
-    <?php 
+<?php 
     
 
     $hotels = [
@@ -53,16 +41,55 @@
 
     ];
 
-  foreach($hotels as $key => $hotel){
-    foreach($hotel as $classhotel){
-        echo $classhotel .'<br>';
-    }
-   
-  }
+  
 
 ?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>php hotel</title>
+</head>
+
+<body>
+    
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <?php  foreach($hotels as $hotel){ ?>
+
+    <tr>
+   
+      <td><?php echo $hotel['name'];?></td>
+      <td><?php echo $hotel['description'];?></td>
+      <td> <?php echo $hotel['parking']?'Si':'No';?></td>
+      <td> <?php echo $hotel['vote'];?></td>
+      <td> <?php echo $hotel['distance_to_center'];?> Km</td>
+    </tr>
+    <?php  } ?>
     
     
+  </tbody>
+</table>
+   
+
 
 </body>
 
